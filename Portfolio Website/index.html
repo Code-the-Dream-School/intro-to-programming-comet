@@ -8,13 +8,14 @@
 <meta name="author" content="Crystal Scott">
 <link rel="stylesheet" href="https://use.typekit.net/ndc3iji.css">
 <link rel="stylesheet" href="styles/style.css">
+<link rel="stylesheet" href="styles/normalize.css">
 <!--<link rel="icon" href="/favicon.ico">-->
 </head>
 
 <body>
 <!-- Header -->
 	<header>
-		<div id=""><a href="#">Skip to main content</a></div>
+		<div><a href="#">Skip to main content</a></div>
 	<!-- Navigation -->
 		<nav role="navigation">
 			<ul>
@@ -24,20 +25,10 @@
 				<li><a href="#connect">Connect</a></li>
 			</ul>
 		</nav>
-		<form role="search" action="/" method="get">
-  			<label for="header-search">
-    			<span>Search</span>
-  			</label>
-  			<input type="text" id="#" name="header-search"/>
-  			<button type="submit">
-    			<span>Search</span>
-<!--AJAX Later for Search Auto Complete-->
-  			</button>
-		</form>
 	</header>
 <!-- Banner -->
 	<section role="banner">
-		<img src="#" role="presentation"/>
+		<img src="#" role="presentation" alt=""/>
 		<!--	<img src="images/headshot.png">-->
 		<h1>Crystal Scott</h1>
 	</section>
@@ -86,6 +77,31 @@
 						<a href="https://www.linkedin.com/in/crystal-scott-3b1875199/" target="_blank">LinkedIn</a>
 						<a href="https://github.com/cscott828" target="_blank">GitHub</a>
 					</div>
+		</section>
+<!-- Message Section -->
+		<section>
+			<h2>Leave a Message</h2>
+			<form name="leave_message" action="mailto:clcarson84@gmail.com"  method="POST" enctype="multipart/form-data">
+				<label for="name">Name</label>
+				<br>
+				<input type="text" id="name" name="name" required="true">
+				<br>
+				<label for="email">Email</label>
+				<br>
+				<input type="email" id="email" name="email" required="true">
+				<br>
+				<label for="message">Message</label>
+				<br>
+				<textarea id="message" name="message" required="true"></textarea>
+				<br>
+				<button id="submit_button" type="submit">Submit</button>
+			</form>
+		</section>
+		<section id="messages">
+			<h2>Messages</h2>
+			<ul id="messages_list">
+			<!--Message LIs inserted with JS-->
+			</ul>
 		</section>
 	</main>
 <!-- Footer -->
