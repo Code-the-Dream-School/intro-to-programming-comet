@@ -1,4 +1,5 @@
-//copyright and footer
+// lesson 4-2
+// copyright and footer
 const today = new Date()
 const thisyear = today.getFullYear()
 const footer = document.querySelector('footer')
@@ -11,10 +12,50 @@ let skills = ["JavaScript", "HTML", "R-Programming", "CSS"];
 let skillsSection = document.getElementById("skills");
 let skillsList = skillsSection.querySelector("ul");
 
-//"generate skills list"
+// generate skills list
 for (let i = 0; i < skills.length; i++) {
     let skill = document.createElement("li");
     skill.innerHTML = skills[i];
     skillsList.appendChild(skill)
 };
 
+//lesson 4-3 handle message form
+const messageForm = document.querySelector('form[name="leave_message"]')
+messageForm.addEventListener('submit', (event) => {
+    event.preventDefault()
+let name = event.target.name.value;
+console.log(name);
+let email = event.target.email.value;
+console.log(email);
+let message = event.target.message.value;
+console.log(message);
+
+let messageSection = document.getElementById('messages')
+let messageList = messageSection.querySelector('ul')
+console.log(messageList);
+    
+let newMessage = document.createElement('li');
+let a = document.createElement('a');
+let linkText = document.createElement("span");
+    a.appendChild(linkText);
+    a.innerText = name;
+    a.href = "mailto:" + email;
+    newMessage.appendChild(a);
+
+const messageText=document.createElement("span")
+messageText.innerText=" - " + message + " "
+    newMessage.appendChild(messageText)
+
+    // remove button to remove message.
+const removeButton = document.createElement('button');
+    removeButton.innerText = "remove"
+    removeButton.type = 'button';
+    removeButton.addEventListener('click', (event) => {
+const entry = event.target.parentNode
+        entry.remove();
+    });
+    newMessage.appendChild(removeButton);
+    messageList.appendChild(newMessage);
+    messageForm.reset();
+
+});
