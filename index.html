@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>Chris's webpage </title>
+    <meta charset="utf-8">
     <link href="css/style.css" rel="stylesheet"> 
   </head>
-  <body> 
-  <style>
+    <body> 
+      <style>
       ul.a {
         list-style-position: outside;
       }
       </style>
-   
-    <h1>Welcome to my page!</h1>
-
-    <h2>Chris McCourt</h2>
-
-    <h3>About</h3>
+    </body>
+    <header> <h1>Welcome to my page!</h1> </header>
+  <main>
+    <section>
+      <header> <h3><u>About</u></h3> </header>
+  
 
       <p>My name is Chris. 
        The best time of my life has been right now. Being out of work and taking care of my two kids has only furthered my desire to become a better more experienced human being.
@@ -27,12 +27,14 @@
       <p> Now, I am a current student of Code The Dream and on my way to becoming a junior software developer. 
        I am excited to use these new skills in a way that will inspire others around me. 
        My life motto is : “If  I can learn to do it, then so can you”. </p>
+  </section> 
 &nbsp;
-    <h3><u>Experience</u></h3>
+  <section>
+      <header><h3><u>Experience</u></h3></header>
 
     
 &nbsp;
-    <h4>Work History </h4>
+      <header> <h4>Work History </h4> </header>
       <li>Custodian @ a College</li>
       <li>Library Associate @ a Public Library</li>
       <li>Intern @ a Public Works Facility</li>
@@ -42,63 +44,61 @@
       <li>Through all that experience, the most important thing I learned is that when we value people over profit, amazing things can happen 😉</li>
 
 &nbsp;
-    <h4>Coding Projects</h4>
+     <header> <h4>Coding Projects</h4> </header>
         <li>Javascript Drum Kit from @ <a href="https://javascript30.com"> javascript30</a>. This will create a few keybaord keys and attach different drum sounds to them. </li>
         <li>Speech Synthesizer also from @ <a href="https://javascript30.com"> javascript30</a>. This is really neat. This will take text input and have the computer say the text back through your speakers.</li>
-        <li>Video Game addon for Elder Scrolls Online. The add on will help add colorblind accessibility so my stepfather can see his surroundings better when we play together. </ul>
+        <li>Video Game addon for Elder Scrolls Online. The add on will help add colorblind accessibility so my stepfather can see his surroundings better when we play together. </li>
         <li>This wonderful webpage which will also showcase all of my final completed coding projects</li> 
-    
-
+  </section>
         &nbsp;
-				<section class= "skillsList" id="skills">
 
-					<h3>Skills</h3>
+	<section 
+        id="skills">
 
-					<ul></ul>
+				<header> <h3>Skills</h3> </header>
 
-				</section> 
+				<ul> 
+
+        </ul>
+
+	</section> 
         
 
-				<section class="connect" id="connect">
+	<section 
+        id="connect">
 
-        <h3>Connect</h3>
+    <header> <h3><u>Connect</u></h3> </header>
+
         <ul>Github<a href="https://github.com/Cm-humanremains"> My Github</a></ul> 
         <ul>Linkedin <a href="https://linkedin.com/in/christopher-m-a35070138"> My Linkedin</a></ul>    
 
-
-        </section>
-    
-    <main>
-
-    </main>
+  </section>
+  </main>
 &nbsp;
-<section>
-  <header>
-    <h2>Leave a Message</h2><br>
-        <form name= "message" id="leavemessage">
-          <label for="name">Name </label> <br>
-            <input type="text" name="name" required=true></input> <br>
-              <label for="email">Email Address</label> <br>
-                <input type="email" name="email" required=true></input><br>
-                  <label for="comment">Your Message</label> <br>
-                    <textarea type= "message" name="name" required=true></textarea></input>
-                      <button type="submit" name="submit" value="submit">Submit</button>
-        </form>
-  </header>
-</section>
 
-    <section id= "messages">
-      <header>
-        <h2>Messages</h2>
+  <section>
+     <header> <h2>Leave a Message</h2> </header><br>
+        <form name ='leave_message'>
+        <label for="name">Name </label> <br>
+        <input type="text" name="name" id='name' required= 'true'></input> <br>
+        <label for="email">Email Address</label> <br>
+        <input type="email" name="email" id= 'email' required= 'true'></input><br>
+        <label for="comment">Your Message</label> <br>
+        <textarea type= "message" name="message" id='message' required= 'true'></textarea></input>
+        <button type="submit">Submit</button>
+        </form>
+  </section>
+
+  <section id= "messages">
+      <header> <h2>Messages</h2> </header>
           <ul>
-            </ul> 
-      </header>
-    </section> 
+          </ul> 
+  </section> 
 &nbsp;
   <footer>
 
   </footer>
-  <div>
+    <div>
       <script src="js/index.js"></script>
     </div>
   </body>
