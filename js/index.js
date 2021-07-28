@@ -2,8 +2,8 @@
 // copyright and footer
 const today = new Date()
 const thisyear = today.getFullYear()
-const footer = document.querySelector('footer')
-const copyright = document.createElement('p')
+const footer = document.querySelector("footer")
+const copyright = document.createElement("p")
 copyright.innerHTML = `Chris McCourt &copy; ${thisyear}`;
 footer.appendChild(copyright)
 
@@ -21,23 +21,23 @@ for (let i = 0; i < skills.length; i++) {
 
 //lesson 4-3 handle message form
 const messageForm = document.querySelector('form[name="leave_message"]')
-messageForm.addEventListener('submit', (e) => {
+messageForm.addEventListener("submit", (e) => {
     e.preventDefault()
-let name = e.target.name.value;
+let name = messageForm.querySelector('input[id ="name"]').value;
 console.log(name);
-let email = e.target.email.value;
+let email = messageForm.querySelector('input[name ="email"]').value;
 console.log(email);
-let message = e.target.message.value;
+let message = messageForm.querySelector("#message").value;
 console.log(message);
 
-let messageSection = document.getElementById('messages')
-let messageList = messageSection.querySelector('ul')
+let messageSection = document.getElementById("messages")
+let messageList = messageSection.querySelector("ul")
 console.log(messageList);
     
-let newMessage = document.createElement('li');
-let a = document.createElement('a');
-let linkText = document.createElement("span");
-    a.appendChild(linkText);
+let newMessage = document.createElement("li");
+let a = document.createElement("a");
+let link = document.createElement("span");
+    a.appendChild(link);
     a.innerText = name;
     a.href = "mailto:" + email;
     newMessage.appendChild(a);
@@ -47,10 +47,10 @@ messageText.innerText=" - " + message + " "
     newMessage.appendChild(messageText)
 
     // remove button to remove message.
-const removeButton = document.createElement('button');
+const removeButton = document.createElement("button");
     removeButton.innerText = "remove"
-    removeButton.type = 'button';
-    removeButton.addEventListener('click', (event) => {
+    removeButton.type = "button";
+    removeButton.addEventListener("click", (event) => {
 const entry = event.target.parentNode
         entry.remove();
     });
