@@ -21,13 +21,13 @@ for (let i = 0; i < skills.length; i++) {
 
 //lesson 4-3 handle message form
 const messageForm = document.querySelector('form[name="leave_message"]')
-messageForm.addEventListener('submit', (event) => {
-    event.preventDefault()
-let name = event.target.name.value;
+messageForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+let name = e.target.name.value;
 console.log(name);
-let email = event.target.email.value;
+let email = e.target.email.value;
 console.log(email);
-let message = event.target.message.value;
+let message = e.target.message.value;
 console.log(message);
 
 let messageSection = document.getElementById('messages')
