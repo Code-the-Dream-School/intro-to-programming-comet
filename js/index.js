@@ -57,5 +57,4 @@ const entry = event.target.parentNode
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageForm.reset();
-
 });
