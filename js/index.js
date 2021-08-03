@@ -2,10 +2,13 @@
 // copyright and footer
 const today = new Date()
 const thisyear = today.getFullYear()
+//const sm = document.getElementByClass("fa")
 const footer = document.querySelector("footer")
 const copyright = document.createElement("p")
 copyright.innerHTML = `Chris McCourt &copy; ${thisyear}`;
 footer.appendChild(copyright)
+console.log("copyright");
+
 
 // create skills section
 let skills = ["JavaScript", "HTML", "R-Programming", "CSS"];
