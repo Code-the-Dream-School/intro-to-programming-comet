@@ -53,11 +53,8 @@ const removeButton = document.createElement("button");
     removeButton.addEventListener("click", (event) => {
 const entry = event.target.parentNode
         entry.remove();
-        console.log(remove);
     });
     newMessage.appendChild(removeButton);
     messageList.appendChild(newMessage);
     messageForm.reset();
-    
-
 });
