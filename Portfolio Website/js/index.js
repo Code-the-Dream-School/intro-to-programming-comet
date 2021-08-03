@@ -26,6 +26,7 @@ footer.appendChild(copyright);
 for(let i = 0; i < skillsArray.length; i += 1){
 	let skill = document.createElement('li');
 	skill.textContent = skillsArray[i];
+	skill.setAttribute('class', 'skillLi');
 	skillsList.appendChild(skill);
 }
 

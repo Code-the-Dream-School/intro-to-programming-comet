@@ -7,8 +7,8 @@
 <meta name="description" content="A portfolio website for Crystal Scott.">
 <meta name="author" content="Crystal Scott">
 <link rel="stylesheet" href="https://use.typekit.net/ndc3iji.css">
-<link rel="stylesheet" href="styles/style.css">
-<link rel="stylesheet" href="styles/normalize.css">
+<link rel="stylesheet" href="css/index.css">
+<!--<link rel="stylesheet" href="css/normalize.css">-->
 <!--<link rel="icon" href="/favicon.ico">-->
 </head>
 
@@ -17,66 +17,85 @@
 	<header>
 		<div><a href="#">Skip to main content</a></div>
 	<!-- Navigation -->
-		<nav role="navigation">
-			<ul>
-				<li><a href="#about">About</a></li>
-				<li><a href="#experience">Experience</a></li>
-				<li><a href="#education">Education</a></li>
-				<li><a href="#connect">Connect</a></li>
+		<nav class="nav" role="navigation">
+			<ul class="mainMenu">
+				<li class="menuItem"><a href="#about">About</a></li>
+				<li class="menuItem"><a href="#experience">Experience</a></li>
+				<li class="menuItem"><a href="#education">Education</a></li>
+				<li class="menuItem"><a href="#connect">Connect</a></li>
 			</ul>
 		</nav>
 	</header>
 <!-- Banner -->
-	<section role="banner">
-		<img src="#" role="presentation" alt=""/>
-		<!--	<img src="images/headshot.png">-->
+	<section role="banner" id="banner">
 		<h1>Crystal Scott</h1>
+<!--		<img id="bannerImg" src="images/gradient1.png" alt="Crystal Scott">-->
 	</section>
 	<main>
 <!-- About Section -->
-		<section>
-			<h2 id="about">About</h2>
-				<p>Hi, I’m a front-end web developer based in Yakima, Washington. I believe in creativity and perserverance. Learning is my passion and I will forever be a student. My life has a purpose, my family is my drive and my story has just begun.</p>
-		</section>
-<!-- Experiene Section -->
-		<section>
-			<h2 id="experience">Experience</h2>
-				<h3>Design Bookie LLC</h3>
-					<p>Owned and operated small start-up. Specialized in Website Design through Adobe Photoshop layouts. Marketing, Sales and Customer Service were my secondary responsibilities.</p>
-				<h3>Access2online Inc</h3>
-					<p>Business Innovator and Accessibility Analyst. I perform a large range of remote tasks including document remediation, captioning, transcription, website maintenance, WordPress development, and marketing.</p>
-		</section>
-<!-- Education Section -->
-		<section>
-			<h2 id="education">Education</h2>
-				<h3>Code The Dream</h3>
-					<p>Currently attending the Intro to Programming course enhancing techniques and knowledge of JavaScript, HTML and CSS. Eagerly planning to apply for their advanced React JS program this Fall.</p>
-				<h3>Department of Homeland Security</h3>
-					<h4>Certified Trusted Tester (#TT-2005-00903)</h4>
-						<p>The Office of Accessible Systems &amp; Technology Trusted Tester Training Program taught me about the Section 508 Standards applicable to the web, how to install and use web accessibility test tools, and how to apply the Trusted Tester process for testing web sites and web applications for conformance to Section 508 standards and WCAG 2.0 Level A and AA.</p>
-				<h3>The Last Mile</h3>
-					<p>This amazing program helped me to develop highly marketable personal and professional skills that are relevant and competitive in today’s business environment. The core curriculum included HTML, CSS, JavaScript, jQuery, WordPress and Git. At the top of my class, I also functioned as a tutor to my peers.</p>
-				<h3>Yakima Valley College</h3>
-					<h4>Associates of Applied Science- Information Technology</h4> 
-						<p>Courses included: Operating Systems, Networking, Adobe Photoshop and InDesign, Microsoft Word, PowerPoint, Advanced Microsoft Excel and Access, Visual Basic, Computer Hardware, Internet Essentials, Business Law, Marketing and Communications</p>
+		<section id="about">
+			<h2>About</h2>
+			<div class="row">
+				<div class="column">
+					<p>Hi, I’m a front-end web developer based in Yakima, Washington. I believe in creativity and perserverance. Learning is my passion and I will forever be a student. My life has a purpose, my family is my drive and my story has just begun.</p>
+				</div>
+				<div class="column">
+					<img id="headshot" src="images/headshotFlowers.png" alt="Crystal Scott">
+				</div>
+			</div>
 		</section>
 	<!-- Skills -->
-		<aside id="skills">
+		<section id="skills">
 			<h2>Skills</h2>
 			<ul id="skillsList">
 			<!--<li>s inserted with JS-->
 			</ul>
-		</aside>
+		</section>
+<!-- Experiene Section -->
+		<section id="experience">
+			<h2>Experience</h2>
+				<h3>AbleDocs</h3>
+					<p>Currently a Production Technician with the largest PDF accessibility service team in the world. Specializing in PDF remediation to PDF/UA and WCAG 2.1 AA compliance requirements.</p>
+				<h3>Access2online Inc</h3>
+					<p>Business Innovator and Accessibility Analyst. I performed a large range of remote tasks including document remediation, captioning, transcription, website auditing and maintenance, WordPress development, and marketing.</p>
+				<h3>Design Bookie LLC</h3>
+						<p>Owned and operated small start-up. Specialized in website design through Adobe Photoshop layouts. Marketing, sales and customer service were my secondary responsibilities.</p>
+		</section>
+<!-- Education Section -->
+		<section id="education">
+			<h2>Education</h2>
+				<h3>Code The Dream</h3>
+					<p>Currently attending the Intro to Programming course enhancing techniques and knowledge of JavaScript, HTML and CSS. Eagerly planning to apply for their advanced React JS program this Fall.</p>
+				<h3 class="h3margin">Department of Homeland Security</h3>
+					<h4>Certified Trusted Tester (#TT-2005-00903)</h4>
+						<p>The Office of Accessible Systems &amp; Technology Trusted Tester Training Program taught me about the Section 508 Standards applicable to the web, how to install and use web accessibility test tools, and how to apply the Trusted Tester process for testing web sites and web applications for conformance to Section 508 standards and WCAG 2.0 Level A and AA.</p>
+				<h3>The Last Mile</h3>
+					<p>This amazing program helped me to develop highly marketable personal and professional skills that are relevant and competitive in today’s business environment. The core curriculum included HTML, CSS, JavaScript, jQuery, WordPress and Git. At the top of my class, I also functioned as a tutor to my peers.</p>
+				<h3 class="h3margin">Yakima Valley College</h3>
+					<h4>Associates of Applied Science- Information Technology</h4> 
+						<p>Courses included: Operating Systems, Networking, Adobe Photoshop and InDesign, Microsoft Word, PowerPoint, Advanced Microsoft Excel and Access, Visual Basic, Computer Hardware, Internet Essentials, Business Law, Marketing and Communications</p>
+		</section>
 <!-- Connect Section -->
-		<section>
-			<h2 id="connect">Connect with Me</h2>
-					<h3>Let's work together.</h3>
-					<h4>Drop me a line.</h4>
-					<div>
-						<a href="mailto:clcarson84@gmail.com" target="_blank">Email</a>
-						<a href="https://www.linkedin.com/in/crystal-scott-3b1875199/" target="_blank">LinkedIn</a>
-						<a href="https://github.com/cscott828" target="_blank">GitHub</a>
+		<section id="connect">
+			<h2>Connect with Me</h2>
+				<div class="row">
+					<div class="column">
+						<h3>Let's work together.</h3>
 					</div>
+					<div class="column connectLinks">
+						<div class="row">
+							<div class="column">
+								<a href="mailto:clcarson84@gmail.com" target="_blank">Email</a>
+								</div>
+							<div class="column">
+								<a href="https://www.linkedin.com/in/crystal-scott-3b1875199/" target="_blank">LinkedIn</a>
+							</div>
+							<div class="column">
+								<a href="https://github.com/cscott828" target="_blank">GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
 		</section>
 <!-- Message Section -->
 		<section>
