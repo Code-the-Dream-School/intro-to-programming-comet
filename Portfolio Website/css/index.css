@@ -1,0 +1,198 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**************Fonts*****************/
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+/************Main Styles***********/
+* {
+	box-sizing: border-box;
+}
+body {
+	background-color: whitesmoke;
+	color: #080707;
+	display: flex;
+	flex-direction: column;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	font-size: 100%;    
+}
+/************Flex Layout*************/
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	flex-basis: 100%;
+	flex: 1;
+	flex-wrap: wrap;
+	margin: auto;
+}
+/***********Navigation***************/
+.nav {
+	align-items: center;
+	background-color: silver;
+    display: flex;
+    justify-content: flex-end;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	
+}
+.mainMenu {
+	display: flex;
+    align-items: center;
+}
+.menuItem {
+	margin-right: 1em;
+	font-size: 1.125rem;
+}
+.nav a:hover {
+	background-color: rgba(244,61,220,.5);
+}
+.nav a:focus {
+	background-color: rgba(244,61,220,.5);
+}
+
+a {
+	text-decoration: none;
+}
+a[href^="mailto:"] {
+	color: #ce045b;
+}
+ul li {
+	list-style: none;
+}
+section {
+	padding: 2em;
+	margin: 2em;
+}
+h1 {
+	font-family: 'Style Script', cursive;
+	font-size: 8rem;
+	letter-spacing: .2rem;
+	text-align: center;
+}
+h2 {
+	color: #0292e0;
+	font-size: 2rem;
+	font-weight: bold;
+}
+h3 {
+	color: #ae50f7;
+	font-size: 1.5rem;
+	font-weight: bold;
+}
+h4 {
+	color: black;
+	font-size: 1rem;
+	font-weight: bold;
+	margin: auto;
+}
+#banner {
+	background: rgb(231,120,168);
+	background: -webkit-linear-gradient(49deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
+	background: -o-linear-gradient(49deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
+	background: linear-gradient(139deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
+}
+#bannerImg {
+	width: 100%;
+}
+#headshot {
+	width: 100%;
+	max-width: 300px;
+	height: auto;
+	margin-left: auto;
+}
+.h3margin {
+	margin-bottom: auto;
+}
+#skillsList {
+	justify-content: center;
+}
+.skillLi {
+	border-radius: 3px;
+    border: 2px solid hotpink;
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+	margin: 0.5rem;
+}
+/************Form***********/
+label {
+	font-size: 1.25rem;
+	color: black;
+	font-weight: bold;
+}
+input, textarea {
+	font-size: 1.25rem;
+	color: #4c4b4b;
+	border: groove 2px silver;
+	border-radius: 8px;
+	margin-top: .5em;
+    margin-bottom: .5em;
+	padding: .2em;
+}
+#submit_button {
+	background-color: #0292e0;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.25rem;
+	padding: 5px 20px 5px 20px;
+	
+}
+/***********Messages Section*********/
+#messages_list {
+	display: flex;
+	flex-wrap: wrap;
+}
+#messages_list li {
+	border: .5px solid #0292e0;
+	border-radius: 5px;
+	color: black;
+	font-size: 1.25rem;
+	font-weight: bold;
+	flex-basis: 30%;
+	flex-grow: 1;
+	max-width: 33%;
+	margin: 0 1.25% 1em;
+	padding: 1em;
+	
+}
+/*************Footer************/
+footer {
+	align-items: center;
+	background-color: silver;
+    display: flex;
+    justify-content: flex-start;
+	padding: 10px;
+	width: 100%;
+}
+/******************Media Queries***************/
+
+@media only screen and (max-width: 600px) {
+ 	.row {
+    	flex-direction: column;
+ 	}
+	h1 {
+		font-size: 3rem;
+	}
+	#messages_list li {
+		max-width: 100%;
+	}
+	section {
+    	padding: 2em 0em;
+    	margin: 2em 0em;
+	}
+	#messages_list {
+		margin-left: -2.5em;
+	}
+}
+@media only screen and (max-width: 400px) {
+	.menuItem {
+		font-size: 1em;
+	}
+}
