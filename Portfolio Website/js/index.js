@@ -70,10 +70,10 @@ messagesList.addEventListener('click', (e) => {
 		const li = button.parentNode;
 		const ul = li.parentNode;
 		if (button.textContent === 'Remove') {
-		ul.removeChild(li);
-		if (messagesList.children.length == 0){
-			messageSection.style.display = 'none';
-		}
+			ul.removeChild(li);
+			if (messagesList.children.length == 0){
+				messageSection.style.display = 'none';
+			}
 		} else if (button.textContent === 'Edit') {
 			const span = document.querySelector('.message');
 			const input = document.createElement('input');
@@ -89,7 +89,8 @@ messagesList.addEventListener('click', (e) => {
 			span.textContent = input.value;
 			li.insertBefore(span, input);
 			li.removeChild(input);
-			button.textContent = 'Edit';
+			li.removeChild(button);
+//			button.textContent = 'Edit';
 		}
 	}
 });
