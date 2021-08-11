@@ -2,16 +2,14 @@
 <html>
   <head>
     <!--- scripts,links and meta --->
-    <script src="/js/index.js" async></script>
     <script src="https://kit.fontawesome.com/80d26f00f5.js" crossorigin="anonymous"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="/js/index.js" async></script>
     <link href="/Css/index.css" rel="stylesheet"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
-    <title>Chris's webpage </title>
+    <title> Chris's webpage </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,15 +25,19 @@
   
     <!--- Menu Nav Sidebar ---> 
     <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
+        <ul>
+          <a href="#main"><i class="fas fa-home"></i><br>Home</a>
+          <a href="#about"><i class="fas fa-address-card"></i><br>About</a>
+          <a href="#experience"><i class="fas fa-project-diagram"></i><br>Experience</a>
+          <a href="#akills"><i class="fas fa-credit-card"></i><br>Skills</a>
+          <a href="#connect"><i class="fas fa-address-book"></i><br>Connect</a>
+          <a href="#messages"><i class="fas fa-sticky-note"></i><br>Message</a>
+        </ul>
     </div>
     
-    <!-- Use any element to open the sidenav -->
-    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+  <div id="main">
+    
+    
     
     <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
         
@@ -44,8 +46,9 @@
 
     
     
+      
+    <section id= "about" class="type-a">
       <header> <h3><u>About</u></h3> </header><br>
-    <section class="type-a">
         
   
 
@@ -58,14 +61,16 @@
       <p> Now, I am a current student of Code The Dream and on my way to becoming a junior software developer. 
        I am excited to use these new skills in a way that will inspire others around me. 
        My life motto is : “If  I can learn to do it, then so can you”. </p>
-  </section> 
+    </section> 
 &nbsp;
       <header> <h3><u>Experience</u></h3></header><br>
 
-  <section class="type-b">
+    <section  id= "experience" class="type-b">
     
 &nbsp;
       <header> <h4>Work History </h4> </header>
+    <div class="work">
+      <ul>
       <li>Custodian @ a College</li>
       <li>Library Associate @ a Public Library</li>
       <li>Intern @ a Public Works Facility</li>
@@ -73,28 +78,33 @@
       <li>Financial Analyst @ a National Defense Contractor </li>
       <li>Purchasing Director @ Construction Company</li>
       <li>Through all that experience, the most important thing I learned is that when we value people over profit, amazing things can happen 😉</li>
-
+      </ul>
+    </div>
 &nbsp;
      <header> <h4>Coding Projects</h4> </header>
+     <div class="code">
+     <ul>
         <li>Javascript Drum Kit from <a href="https://javascript30.com"> javascript30</a>. The project creates keyboard keys and attaches different drum sounds to them. </li>
         <li>Speech Synthesizer also from <a href="https://javascript30.com"> javascript30</a>. This is really neat. This will take text input and have the computer play the text through the speakers.</li>
         <li>This wonderful webpage which will also showcase all of my final completed coding projects</li> 
-  </section>
+      </ul>
+    </div>
+    </section>
         &nbsp;
 
       <header> <h3><u>Skills</u></h3> </header><br>
 &nbsp;
-	<section id="skills" class="type-c">
-    <ul>
-    </ul>
-	</section> <br>
+	  <section id="skills" class="type-c">
+      <ul>
+      </ul>
+	  </section> <br>
 
-  </main>
 &nbsp;
 &nbsp;
     <header> <h3><u>Leave a Message</u></h3> </header><br>
-  <section class="type-d">
+    <section class="type-d">
         <form name ='leave_message'>
+    <div class="message">
         <label for="name">Name </label> <br>
         <input type="text" name="name" id='name' required= 'true'></input> <br>
         <label for="email">Email Address</label> <br>
@@ -103,23 +113,27 @@
         <textarea type= "message" name="message" id='message' required= 'true'></textarea></input>
         <button type="submit">Submit</button>
         </form>
-  </section>
+      </div>
+    </section>
 
-  <section id= "messages" class="type-e">
-      <header> <h3><u>Messages</u></h3> </header>
+    <section id= "messages" class="type-e">
+        <header> <h3><u>Messages</u></h3> </header>
           <ul>
           </ul> 
-  </section> 
+    </section> 
 &nbsp;
 
-    <section id="connect" class= "type-f">
+      <section id="connect" class= "type-f">
         <a href="#" class="fa fa-facebook"></a>
         <a href="#" class="fa fa-twitter"></a>
         <a href="https://linkedin.com/in/christopher-m-a35070138" class="fa fa-linkedin"></a>
         <a href="https://github.com/Cm-humanremains" class="fa fa-github"></a>
-    </section>
-  <footer>
-  </footer>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-</body>
+      </section>
+  </main>
+      <footer>
+      </footer>
+      <script src="/js/index.js"></script>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    </div> 
+  </body>
 </html>
