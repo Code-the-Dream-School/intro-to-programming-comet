@@ -5,7 +5,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
 //Skills Section
-const skillsArray = ['HTML', 'CSS', 'SAAS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop', 'Adobe Dreamweaver'];
+const skillsArray = ['HTML', 'CSS', 'SAAS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.getElementsByTagName('ul')[0];
 
@@ -79,6 +79,7 @@ messagesList.addEventListener('click', (e) => {
 			}
 		} else if (button.textContent === 'Edit') {
 			const span = document.querySelector('.message');
+			console.log(span);
 			const input = document.createElement('input');
 			input.className += 'input';
 			input.type = 'text';

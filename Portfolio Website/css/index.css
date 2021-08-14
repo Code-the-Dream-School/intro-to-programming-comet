@@ -169,6 +169,20 @@ h4 {
 .h3margin {
 	margin-bottom: auto;
 }
+#webHeading {
+	text-align: center;
+}
+figcaption {
+	display: flex;
+}
+figcaption a {
+	margin: auto;
+	color: #551a8b;
+	padding: .5em;
+}
+.link:hover {
+	font-size: 1.1em;
+}
 /*********Images**********/
 #banner {
 	background: rgb(231,120,168);
@@ -187,7 +201,7 @@ h4 {
 .icon {
 	width: 2em;
 	height: 2em;
-	margin: auto;
+	margin: .5em auto;
 }
 .icon:hover {
 	width: 2.5em;
@@ -198,8 +212,17 @@ h4 {
 	margin: auto;
 	padding: 1em;
 }
+.images2 {
+	max-width: 300px;
+	max-height: 215px;
+	margin: auto;
+	padding: 1em;
+}
 #hbu {
 	max-height: 185px;
+}
+#sci {
+	height: 215px;
 }
 /********Skills Section******/
 #skillsList {
@@ -319,20 +342,23 @@ footer {
 		max-width: 100%;
 	}
 	section {
-    	padding: 2em .5em;
-    	margin: 2em 0em;
+    	padding: 0em .5em;
+    	margin: 0em;
 	}
 	#messages_list {
 		margin-left: -2.5em;
 	}
 	#headshot {
-	max-width: 300px;
+		max-width: 300px;
 	}
 	#banner {
 		margin-top: 2em;
 	}
 	.connectLink {
-	padding: 1em;
+		padding: 1em;
+	}
+	footer {
+		margin-top: 2em;
 	}
 }
 @media only screen and (max-width: 400px) {
