@@ -1,0 +1,66 @@
+* 
+.fa-rotate-90 {
+  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+}
+
+body{
+  background:transparent;
+  max-width: auto;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color:rgb(255, 255, 255);
+
+}
+
+body::before{
+background-image:url('https://wallpaperaccess.com/full/4317847.jpg');
+content:"";
+top:0;
+right:0;
+left:0;
+bottom:0;
+width: 100%;
+height:100%;
+position: fixed;
+opacity: 70%;
+z-index: -1;
+}
+
+
+h3 {
+color: #0ba131;
+font-size: 50px;
+margin: 15%;
+
+}
+
+  /*--------------- side nav menu------------------ */
+
+.sidenav {
+  width: 200px;
+  position: sticky;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background:transparent;
+  overflow-x: hidden;
+  padding: 10px 0;
+}
+
+.sidenav a {
+  padding: 15px 15px 15px 20px;
+  margin:0;
+  top: 10%;
+  text-decoration: none;
+  font-size: 28px;
+  color: rgb(231, 87, 87);
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #d8a7a0;
+}
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
