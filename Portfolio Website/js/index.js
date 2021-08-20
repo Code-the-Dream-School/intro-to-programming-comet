@@ -5,7 +5,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
 //Skills Section
-const skillsArray = ['HTML', 'CSS', 'SAAS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop', 'Adobe Dreamweaver'];
+const skillsArray = ['HTML', 'CSS', 'SAAS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.getElementsByTagName('ul')[0];
 
@@ -75,7 +75,8 @@ messagesList.addEventListener('click', (e) => {
 				messageSection.style.display = 'none';
 			}
 		} else if (button.textContent === 'Edit') {
-			const span = document.querySelector('.message');
+			const span = li.querySelector('span');
+			console.log(span);
 			const input = document.createElement('input');
 			input.className += 'input';
 			input.type = 'text';
@@ -84,13 +85,12 @@ messagesList.addEventListener('click', (e) => {
 			li.removeChild(span);
 			button.textContent = 'Save';
 		} else if (button.textContent === 'Save') {
-			const input = document.querySelector('.input');
+			const input = li.querySelector('input');
 			const span = document.createElement('span');
 			span.textContent = input.value;
 			li.insertBefore(span, input);
 			li.removeChild(input);
-			li.removeChild(button);
-//			button.textContent = 'Edit';
+			button.textContent = 'Edit';
 		}
 	}
 });
