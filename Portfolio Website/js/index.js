@@ -78,7 +78,7 @@ messagesList.addEventListener('click', (e) => {
 				messageSection.style.display = 'none';
 			}
 		} else if (button.textContent === 'Edit') {
-			const span = document.querySelector('.message');
+			const span = li.querySelector('span');
 			console.log(span);
 			const input = document.createElement('input');
 			input.className += 'input';
@@ -88,13 +88,12 @@ messagesList.addEventListener('click', (e) => {
 			li.removeChild(span);
 			button.textContent = 'Save';
 		} else if (button.textContent === 'Save') {
-			const input = document.querySelector('.input');
+			const input = li.querySelector('input');
 			const span = document.createElement('span');
 			span.textContent = input.value;
 			li.insertBefore(span, input);
 			li.removeChild(input);
-			li.removeChild(button);
-//			button.textContent = 'Edit';
+			button.textContent = 'Edit';
 		}
 	}
 });
