@@ -1,0 +1,230 @@
+/* =========== PAGE STYLE =============== */
+* {
+	box-sizing: border-box;
+}
+/* Change the background color and text of the page body */
+body { 
+    background-color: lightgrey; 
+    color:rgb(8, 104, 104);
+}
+a:link {
+    color:rgb(37, 155, 209);
+    text-decoration: none; /* remove the underline.*/
+}
+a:visited {
+    color: peru;
+}
+img {
+    border-radius: 50%;
+    border: 3px solid rgb(170, 218, 226);
+    width: 30%;
+    height: 60%;
+}
+
+/* Customize the font family - I like the default font */
+
+
+/* Add spacing (padding/margin) between sections */
+section {
+    margin-bottom: 2px; 
+    padding: repeat(3, 2px) 10px;;
+}
+/* Change the font size, weight, and color of all headings */
+h1 {
+    font-size: 2.5rem; 
+    font-weight: bolder; 
+    color:rgb(47, 172, 145);
+}
+h2 {
+    font-size: 3.5rem; 
+    font-weight: bolder; 
+    color:rgb(47, 172, 145);
+}
+h3 {
+    font-size: 35px; 
+    font-weight: bold; 
+    color:rgb(47, 172, 145);
+}
+h4 {
+    font-size: 30px; 
+    font-weight: bold; color:rgb(47, 172, 145);
+}
+h5 {
+    font-size: 25px; 
+    font-weight: bold; 
+}
+/* Transform the "Experience" list items into styled blocks*/
+#mainlist li {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: circle;
+    font-size: larger;
+}
+#sublist li {
+    list-style-type: lower-roman;
+    font-size: smaller;
+}
+/* Transform the "Skills" list items into styled blocks */
+#skills li {
+    list-style-type: none;
+    font-size: larger;
+    font-weight: bolder;
+    display: inline-block; /* the default for span */
+    writing-mode: horizontal-tb;
+    margin: 8px;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    box-shadow: 0 4px 0 0 rgba(0,0,0,0.1);
+}
+
+/* =============== Projects ================ */
+.projects {
+    list-style-type: none;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+/* Style the "Leave a Message" form elements: 
+    1) Change font size and color of labels */
+    label {
+    color: rgb(64, 93, 224);
+    font-size: 1.3rem;
+    margin: 0rem;
+    padding: 0rem;
+}
+/* 2) Change font size, padding, border, etc. of inputs and textarea */
+    textarea {
+        font-size: 1.0rem;
+        padding: 16px 2px 2px 8px;
+        font-style: italic;
+    }    
+/* 3) Add spacing (padding/margin) between form fields */
+    #message {
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+    }
+/* 4) Change padding, background color, border, etc. of submit button */
+    #submitButton { /* submit button style */
+        font-size: 1.0rem;
+        color:white;
+        border: blue;
+        border-width: 16px;
+        margin: .25rem;
+        padding: .2rem;
+        background-color:blue;
+    }
+/* Transform the "Messages" list items into styled blocks and customize the button(s)*/
+    #newMessage {
+        list-style-type: none; 
+    }
+    button { /* remove, edit and save buttons style */
+        font-size: 1.0rem;
+        color:white;
+        border: blue;
+        border-width: 16px;
+        margin: .25rem;
+        padding: .2rem;
+        background-color: green;
+    }
+
+/* Change the spacing and background color of the footer */
+footer p {
+    color: whitesmoke;
+    background-color: rgb(221, 215, 215);
+    margin: 0em;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.removeButton { /* First created the class in js:51 */
+    font-size: 1.0rem;
+    border-width: 16px;
+    margin: .25rem;
+    padding: .2rem;
+    background-color: red;
+    color: white;
+}
+/* CSS gris layout */
+.logo {
+    display: flex; /*flex i got better results than grid*/
+    align-items: center;
+}
+.name {
+    color: cornsilk;
+    font-size: 3.2rem;
+    flex: 1;
+    /*text-align: center;*/
+}
+.img {
+    align-items: center;  
+}
+
+/* Add a navigational header to your webpage */
+
+    .nav ul li {
+        list-style-type: none;
+        font-size: 1rem;
+        justify-content: flex-end;
+        align-items: center;
+        font-weight: bolder;
+        display: inline-block; /* the default for span */
+        writing-mode: horizontal-tb;
+        margin: 10px auto;
+        padding: 5px;
+        background-color: whitesmoke;
+        border-radius: 7px;
+    }
+
+    /* (Optional) Make the header sticky/fixed on the page */
+   #banner {
+        position: sticky;
+        top: 0;
+        padding: 10px;
+        margin: 45px auto;
+        background-color: lightsteelblue;
+        color: ghostwhite;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+    
+/* Change the layout of your "Experience" section using rows and columns so items are displayed in a grid rather than a list */
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto 30%;/* Track values*/
+    grid-template-rows: auto;
+    margin: 45px auto;
+    padding: 5px;
+	background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1.5px 0 0 rgba(0,0,0,0.1);
+}
+.box1, .box3, .box2, .logo {
+    flex: 1 200px;
+	color: #fff;
+	padding: 10px;
+	margin: 2px;	
+	background: #3db5da;
+	border-radius: 2px;
+}
+/* Update the "Leave a Message" form to use Flexbox or CSS Grid */
+.leave-a-message {
+    display: grid;
+    margin: 45px auto;
+    padding: 5px;
+    grid-template-columns: repeat(auto-fit, 300px);/* Track values*/
+    grid-template-rows: 60px 60px;
+}
+
+
+/* Use Media Queries to make sure the webpage is responsive for all device sizes (mobile, tablet, desktop, etc.) */
+@media screen {
+    section {
+        min-height: auto; /* browser will determine the size of the selected*/
+    }
+}
+
+
