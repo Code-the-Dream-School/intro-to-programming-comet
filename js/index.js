@@ -62,19 +62,30 @@ const entry = event.target.parentNode
     messageForm.reset();
 });
 
-// sidebar menu //
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+const githubRequest = new XMLHttpRequest();
+const GITHUB_USERNAME =  'francinemclaurin'
 
-/* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body
-//function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
-    document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
- // }
-  
-  /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white
-  //function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-    document.getElementById("main").style.marginLeft = "0";
-    document.body.style.backgroundColor = "white";
- // */
+githubRequest.open('GET', 'https://api.github.com/users/cm-humanremains/repos')
+
+githubRequest.send();
+
+// Handle Response from Server
+
+githubRequest.addEventListener('load', function () {
+    let repositories = JSON.parse(this.response);
+
+    console.log(repositories);
+
+    // get projects section
+    const projectSection = document.getElementById('projects');
+
+    // get ul list inside of section
+    const projectList = projectSection.querySelector('ul');
+
+    // for loop to loop over repositories. another way to do for loop.
+    for( let i = 0; i< repositories.length;i++){
+        let project=document.createElement('li');
+        project.innerText= repositories[i].name;
+        projectList.appendChild(project)
+    }
+})
