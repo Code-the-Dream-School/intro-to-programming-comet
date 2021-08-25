@@ -15,6 +15,36 @@ const messagesList = document.getElementById('messages_list');
 const messageSection = document.getElementById('messages');
 const submitButton = document.getElementById('submit_button');
 
+//Projects
+const githubRequest = new XMLHttpRequest();
+githubRequest.open("GET", "https://api.github.com/users/cscott828/repos");
+githubRequest.send();
+githubRequest.addEventListener("load", gitHandler);
+
+function gitHandler(e){
+	const repositories = JSON.parse(this.response);
+	const projectList = document.querySelector('#projects');
+	const ulElement = projectList.querySelector('ul');
+	
+	for(i=0; i< repositories.length; i++){
+		let project = document.createElement('li');
+		project.innerHTML = `<a href= ${repositories[i].html_url} target="_blank">${repositories[i].name}</a>`;
+		ulElement.appendChild(project);
+		
+		let newList = document.createElement('ul');
+		project.appendChild(newList);
+		
+		let projectDescription = document.createElement('li');
+		projectDescription.innerText = repositories[i].description;
+		project.appendChild(projectDescription);
+		newList.appendChild(projectDescription);
+		
+		let projectDate = document.createElement('li');
+    	let createDate = new Date(Date.parse(repositories[i].created_at));
+    	projectDate.innerText = "Created: " + createDate.getMonth() + "/" + createDate.getDate() + "/" + createDate.getFullYear();
+    	newList.appendChild(projectDate);		
+	}
+}
 
 
 
@@ -33,7 +63,7 @@ for(let i = 0; i < skillsArray.length; i += 1){
 //Connect Section- Message Form
 function createLi(formName, formEmail, formMessage){
 	const li = document.createElement('li');
-	li.innerHTML = `<a href="mailto:${formEmail}">${formName} </a><span class="message">wrote: ${formMessage}</span> `;
+	li.innerHTML = `<a href="mailto:${formEmail}">${formName} </a><span class="message">Message: ${formMessage}</span> `;
 	//Remove Button
 	const removeButton = document.createElement('button');
 	removeButton.innerText = 'Remove';
@@ -97,6 +127,7 @@ messagesList.addEventListener('click', (e) => {
 		}
 	}
 });
+
 
 
 
