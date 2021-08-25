@@ -7,7 +7,7 @@ const footer = document.querySelector("footer")
 const copyright = document.createElement("p")
 copyright.innerHTML = `Chris McCourt &copy; ${thisyear}`;
 footer.appendChild(copyright)
-console.log("copyright");
+//console.log("copyright");
 
 
 // create skills section
@@ -66,26 +66,18 @@ const githubRequest = new XMLHttpRequest();
 const GITHUB_USERNAME =  'francinemclaurin'
 
 githubRequest.open('GET', 'https://api.github.com/users/cm-humanremains/repos')
-
 githubRequest.send();
 
 // Handle Response from Server
 
 githubRequest.addEventListener('load', function () {
     let repositories = JSON.parse(this.response);
-
-    console.log(repositories);
-
-    // get projects section
     const projectSection = document.getElementById('projects');
 
-    // get ul list inside of section
     const projectList = projectSection.querySelector('ul');
-
-    // for loop to loop over repositories. another way to do for loop.
-    for( let i = 0; i< repositories.length;i++){
+    for( let i = 0; i< repositories.length; i++){
         let project=document.createElement('li');
-        project.innerText= repositories[i].name;
-        projectList.appendChild(project)
+            project.innerText= repositories[i].name;
+                projectList.appendChild(project)
     }
 })
