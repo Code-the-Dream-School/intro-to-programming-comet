@@ -10,6 +10,7 @@
 body {
 	background-color: whitesmoke;
 	color: #080707;
+	font-weight: bold;
 	display: flex;
 	flex-direction: column;
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -63,11 +64,11 @@ nav ul li a:hover {
   color: #8c55bf;
 }
 nav.stroke ul li a,
-nav.fill ul li a {
+.fill a {
   position: relative;
 }
 nav.stroke ul li a:after,
-nav.fill ul li a:after {
+.fill a:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -83,21 +84,21 @@ nav.stroke ul li a:hover:after {
   width: 100%;
 }
 
-nav.fill ul li a {
+.fill a {
   transition: all 2s;
 }
 
-nav.fill ul li a:after {
+.fill a:after {
   text-align: left;
   content: '.';
   margin: 0;
   opacity: 0;
 }
-nav.fill ul li a:hover {
-  color: #fff;
+.fill a:hover {
+  color: #8c55bf;
   z-index: 1;
 }
-nav.fill ul li a:hover:after {
+.fill a:hover:after {
   z-index: -10;
   animation: fill 1s forwards;
   -webkit-animation: fill 1s forwards;
@@ -151,7 +152,7 @@ h1 {
 }
 h2 {
 	color: #0292e0;
-	font-size: 2rem;
+	font-size: 2.5rem;
 	font-weight: bold;
 	margin-top: 3em;
 }
@@ -183,14 +184,31 @@ figcaption a {
 .link:hover {
 	font-size: 1.1em;
 }
+.border {
+	border-bottom: 10px solid;
+  	border-image-slice: 1;
+  	border-width: 5px;
+	border-image-source: linear-gradient(to left, #0292e0, #e778a8);
+}
 /*********Images**********/
 #banner {
+/*
 	background: rgb(231,120,168);
 	background: -webkit-linear-gradient(49deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
 	background: -o-linear-gradient(49deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
 	background: linear-gradient(139deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
+*/
+	background-image: url("../images/FlowerBottomBorder.jpeg");
+	background-repeat: no-repeat;
+	height: auto;
+	background-position: center;
+	background-size: cover;
 	padding: 0px;
 	margin: 0px;
+}
+.msgFlowers {
+	height: auto;
+	width: 100%;
 }
 #headshot {
 	width: 100%;
@@ -282,6 +300,9 @@ input, textarea {
 }
 #messages_list li input {
 	width: 100%;
+}
+#messages_list li a {
+	display: block;
 }
 /*************Footer************/
 footer {
