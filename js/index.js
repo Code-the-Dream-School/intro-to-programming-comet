@@ -63,13 +63,9 @@ const entry = event.target.parentNode
 });
 
 const githubRequest = new XMLHttpRequest();
-const GITHUB_USERNAME =  
-
+const github_username =  
 githubRequest.open('GET', 'https://api.github.com/users/cm-humanremains/repos')
 githubRequest.send();
-
-// Handle Response from Server
-
 githubRequest.addEventListener('load', function () {
     let repositories = JSON.parse(this.response);
     const projectSection = document.getElementById('projects');
