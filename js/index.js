@@ -63,7 +63,7 @@ const entry = event.target.parentNode
 });
 
 const githubRequest = new XMLHttpRequest();
-const GITHUB_USERNAME =  'francinemclaurin'
+const GITHUB_USERNAME =  
 
 githubRequest.open('GET', 'https://api.github.com/users/cm-humanremains/repos')
 githubRequest.send();
