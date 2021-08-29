@@ -5,7 +5,7 @@ const footer = document.querySelector('footer');
 const copyright = document.createElement('p');
 
 //Skills Section
-const skillsArray = ['HTML', 'CSS', 'SAAS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop'];
+const skillsArray = ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop', 'Accessibility'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.getElementsByTagName('ul')[0];
 
@@ -16,31 +16,36 @@ const messageSection = document.getElementById('messages');
 const submitButton = document.getElementById('submit_button');
 
 //Projects
-const githubRequest = new XMLHttpRequest();
-githubRequest.open("GET", "https://api.github.com/users/cscott828/repos");
-githubRequest.send();
-githubRequest.addEventListener("load", gitHandler);
+fetchData("https://api.github.com/users/cscott828/repos");
 
-function gitHandler(e){
-	const repositories = JSON.parse(this.response);
+function fetchData(url) {
+	return fetch(url)
+		.then(response => response.json())
+		.then(data => gitHubRequest(data))
+		.catch((error) => {
+		console.error("Error:", error);
+	})
+}
+
+function gitHubRequest(data){
 	const projectList = document.querySelector('#projects');
 	const ulElement = projectList.querySelector('ul');
 	
-	for(i=0; i< repositories.length; i++){
+	for(i=0; i< data.length; i++){
 		let project = document.createElement('li');
-		project.innerHTML = `<a href= ${repositories[i].html_url} target="_blank">${repositories[i].name}</a>`;
+		project.innerHTML = `<a href= ${data[i].html_url} target="_blank">${data[i].name}</a>`;
 		ulElement.appendChild(project);
 		
 		let newList = document.createElement('ul');
 		project.appendChild(newList);
 		
 		let projectDescription = document.createElement('li');
-		projectDescription.innerText = repositories[i].description;
+		projectDescription.innerText = data[i].description;
 		project.appendChild(projectDescription);
 		newList.appendChild(projectDescription);
 		
 		let projectDate = document.createElement('li');
-    	let createDate = new Date(Date.parse(repositories[i].created_at));
+    	let createDate = new Date(Date.parse(data[i].created_at));
     	projectDate.innerText = "Created: " + createDate.getMonth() + "/" + createDate.getDate() + "/" + createDate.getFullYear();
     	newList.appendChild(projectDate);		
 	}
