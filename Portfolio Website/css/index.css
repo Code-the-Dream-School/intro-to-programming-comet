@@ -10,7 +10,7 @@
 body {
 	background-color: whitesmoke;
 	color: #080707;
-	font-weight: bold;
+/*	font-weight: bold;*/
 	display: flex;
 	flex-direction: column;
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -190,14 +190,13 @@ figcaption a {
   	border-width: 5px;
 	border-image-source: linear-gradient(to left, #0292e0, #e778a8);
 }
+#thanks {
+	font-size: 2rem;
+	font-family: cursive;
+	margin: auto;
+}
 /*********Images**********/
 #banner {
-/*
-	background: rgb(231,120,168);
-	background: -webkit-linear-gradient(49deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
-	background: -o-linear-gradient(49deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
-	background: linear-gradient(139deg, rgba(231,120,168,1) 8%, rgba(121,193,232,1) 87%);
-*/
 	background-image: url("../images/FlowerBottomBorder.jpeg");
 	background-repeat: no-repeat;
 	height: auto;
@@ -206,9 +205,10 @@ figcaption a {
 	padding: 0px;
 	margin: 0px;
 }
-.msgFlowers {
+.msgFlower {
 	height: auto;
-	width: 100%;
+	width: 50%;
+	margin: auto;
 }
 #headshot {
 	width: 100%;
@@ -270,23 +270,35 @@ input, textarea {
 	border-radius: 8px;
 	margin-top: .5em;
     margin-bottom: .5em;
-	padding: .2em;
+	padding: .4em;
 }
 #submit_button {
 	background-color: #0292e0;
 	border: none;
 	border-radius: 8px;
 	font-size: 1.25rem;
+	font-weight: bold;
 	padding: 5px 20px 5px 20px;
+	margin-top: 10px;
 	
 }
 /***********Messages Section*********/
+/*
+#messages {
+	padding-top: 0;
+	margin-top: 0;
+}
+#message {
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+*/
 #messages_list {
 	display: flex;
 	flex-wrap: wrap;
 }
 #messages_list li {
-	border: .5px solid #0292e0;
+	border: .5px solid #0292e0d4;
 	border-radius: 5px;
 	color: black;
 	font-size: 1.25rem;
@@ -295,7 +307,7 @@ input, textarea {
 	margin: .5em;
 	padding: 1em;
 }
-#messages_list li button {
+#messages_list li span {
 	display: block;
 }
 #messages_list li input {
@@ -303,6 +315,15 @@ input, textarea {
 }
 #messages_list li a {
 	display: block;
+}
+#messages_list li button {
+	background-color: #0292e0d4;
+	border: none;
+	border-radius: 8px;
+	font-size: 1.1rem;
+    padding: 3px 10px;
+    margin-right: 5px;
+	margin-top: 5px;
 }
 /*************Footer************/
 footer {
