@@ -1,11 +1,10 @@
 // lesson 4-2
 // copyright and footer
-const today = new Date()
-const thisyear = today.getFullYear()
-//const sm = document.getElementByClass("fa")
-const footer = document.querySelector("footer")
-const copyright = document.createElement("p")
+const today = new Date();
+const thisyear = today.getFullYear();
+const copyright = document.createElement("p");
 copyright.innerHTML = `Chris McCourt &copy; ${thisyear}`;
+const footer = document.querySelector("footer");
 footer.appendChild(copyright)
 //console.log("copyright");
 
@@ -62,18 +61,30 @@ const entry = event.target.parentNode
     messageForm.reset();
 });
 
-const githubRequest = new XMLHttpRequest();
-const github_username =  
-githubRequest.open('GET', 'https://api.github.com/users/cm-humanremains/repos')
-githubRequest.send();
-githubRequest.addEventListener('load', function () {
-    let repositories = JSON.parse(this.response);
-    const projectSection = document.getElementById('projects');
 
-    const projectList = projectSection.querySelector('ul');
-    for( let i = 0; i< repositories.length; i++){
-        let project=document.createElement('li');
-            project.innerText= repositories[i].name;
-                projectList.appendChild(project)
-    }
-})
+// Github stuff lesson 6-1 and 602 adding projects section.
+
+const User = "cm-humanremains";
+const projectSection = document.getElementById("projects");
+const projectList = projectSection.querySelector("ul");
+
+
+fetch(`https://api.github.com/users/${User}/repos`)
+  .then((repos) => repos.json())
+  .then((repositories) => {
+    repositories.forEach((repo) => {
+const project = document.createElement("li");
+   project.innerText = repo.name;
+      projectList.appendChild(project);
+    });
+  });
+
+
+// Dark Mode - space mode for better viewing in teh afternoon evening time.
+
+function dark() {
+    var element = document.body;
+    element.classList.toggle("mode");
+  }
+
+ 
