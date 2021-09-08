@@ -8,6 +8,53 @@ const copyright = document.createElement('p');
 const skillsArray = ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop', 'Accessibility'];
 const skillsSection = document.getElementById('skills');
 const skillsList = skillsSection.getElementsByTagName('ul')[0];
+//Scroll Animation
+const scroll = window.requestAnimationFrame ||
+            function(callback){ window.setTimeout(callback, 1000/60)};
+const elementsToShow = document.querySelectorAll('.show-on-scroll');
+
+function loop() {
+
+  elementsToShow.forEach(function (element) {
+    if (isElementInViewport(element)) {
+      element.classList.add('is-visible');
+    } else {
+      element.classList.remove('is-visible');
+    }
+  });
+
+  scroll(loop);
+}
+loop();
+
+function isElementInViewport(el) {
+  
+  const rect = el.getBoundingClientRect();
+  return (
+    (rect.top <= 0
+      && rect.bottom >= 0)
+    ||
+    (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+    ||
+    (rect.top >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+  );
+}
+//Navigation Toggle
+
+document.getElementById('hamnav').addEventListener("click", function() {
+	const input = document.getElementById('hamburger');
+	input.checked = !input.checked;
+	const hamnav = document.getElementById('hamnav');
+	if(!input.checked){
+		hamnav.style.background = 'none';
+	}else{
+		hamnav.style.background = '#fff';
+	}
+});
+
+
 
 //Message Section with Form
 const messageForm = document.getElementsByName('leave_message')[0];

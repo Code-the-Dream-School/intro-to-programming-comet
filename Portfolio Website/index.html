@@ -14,12 +14,12 @@
 <meta property="og:description" content="A portfolio website for Crystal Scott.">
 <link rel="stylesheet" href="https://use.typekit.net/ndc3iji.css">
 <link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
 <!--favicon-->
 <link rel="shortcut icon" href="icons/favicon.ico">
 <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 <link rel="manifest" href="icons/site.webmanifest">
-<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
 </head>
 
 <body>
@@ -28,17 +28,32 @@
 		<a class="skipLink" href="#main">Skip to main content</a>	
 	<!-- Navigation -->
 		<nav class="nav stroke" role="navigation">
-			<ul class="mainMenu">
+			<ul id="myLinks" class="mainMenu">
 				<li class="menuItem"><a href="#about">About</a></li>
+				<li class="menuItem"><a href="#skills">Skills</a></li>
+				<li class="menuItem"><a href="#projects">Projects</a></li>
 				<li class="menuItem"><a href="#experience">Experience</a></li>
 				<li class="menuItem"><a href="#education">Education</a></li>
 				<li class="menuItem"><a href="#connect">Connect</a></li>
 			</ul>
 		</nav>
+	<!-- Mobile Navigation --> 
+			<nav id="hamnav">
+   				<label for="hamburger">&#9776;</label>
+  				<input type="checkbox" id="hamburger"/>
+				 <div id="hamitems">
+					<a href="#about" tabindex="-1">About</a>
+					<a href="#skills" tabindex="-1">Skills</a>
+					<a href="#projects" tabindex="-1">Projects</a>
+					<a href="#experience" tabindex="-1">Experience</a>
+					<a href="#education" tabindex="-1">Education</a>
+					<a href="#connect" tabindex="-1">Connect</a>
+				  </div>
+			 </nav>
 	</header>
 <!-- Banner -->
 	<section role="banner" id="banner">
-		<h1>Crystal Scott</h1>
+		<h1>Crystal Scott<span class="butterfly"></span></h1>
 	</section>
 	<main id="main">
 <!-- About Section -->
@@ -51,7 +66,7 @@
 					<p>I am currently enrolled in the Intro to Programming, Code the Dream program and truly appreciate this life-changing opportunity. This program is helping me expand my knowledge of HTML, CSS, and JavaScript. I'm excited about the future and can't wait to see what God has planned for me!</p>
 				</div>
 				<div class="column">
-					<img id="headshot" src="images/headshotFlowers.png" alt="Crystal Scott">
+					<img id="headshot" class="inline-photo show-on-scroll" src="images/headshotFlowers.png" alt="Crystal Scott">
 				</div>
 			</div>
 		</section>
@@ -73,48 +88,48 @@
 			<h2>Experience</h2>
 				<div class="row">
 					<div class="column">
-						<h3>AbleDocs</h3>
+						<a href="https://www.abledocs.com/en" target="_blank"><h3>AbleDocs</h3></a>
 						<p>Currently a Production Technician with the largest PDF accessibility service team in the world. Specializing in PDF remediation to PDF/UA and WCAG 2.1 AA compliance standards. I work remotely from home and enjoy the professional training and high quality education with document accessibility.</p>
 					</div>
 					<div class="column">
-						<img class="images" src="images/AbleDocs-logo.png" alt="AbleDocs">
+						<a href="https://www.abledocs.com/en" class="margAuto" target="_blank"><img class="images inline-photo show-on-scroll" src="images/AbleDocs-logo.png" alt="AbleDocs"></a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<h3>Access2online Inc</h3>
+						<a href="https://www.access2online.com/" target="_blank"><h3>Access2online Inc</h3></a>
 						<p>Business Innovator, Accessibility Analyst and Web Developer. I performed a large range of remote tasks including document remediation, captioning, transcription, website auditing and maintenance, WordPress development, and marketing.</p>
 					</div>
 					<div class="column">
-						<img class="images" src="images/access2online_logo.jpg" alt="Access2online Online Accessibility on a budget">
+						<a href="https://www.access2online.com/" class="margAuto" target="_blank"><img class="images inline-photo show-on-scroll" src="images/access2online_logo.jpg" alt="Access2online Online Accessibility on a budget"></a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<h3>Design Bookie LLC</h3>
+						<a href="https://www.pinterest.com/designbookie/_created/" target="_blank"><h3>Design Bookie LLC</h3></a>
 						<p>Owned and operated small start-up. Specialized in website design through Adobe Photoshop layouts. Marketing, sales and customer service were my secondary responsibilities.</p>
 					</div>
 					<div class="column">
-						<img class="images" src="images/design_bookie_logo.jpg" alt="Design Bookie">
+						<a href="https://www.pinterest.com/designbookie/_created/" class="margAuto" target="_blank"><img class="images inline-photo show-on-scroll" src="images/design_bookie_logo.png" alt="Design Bookie"></a>
 					</div>
 				</div>
 				<h3 id="webHeading">Developed Websites</h3>
 				<div class="row">
 						<div class="column">
 							<img src="images/A2OwpPlugin.png" class="images2" role="presentation" alt="">
-							<figcaption><a href="http://www.wordpress.access2online.com/" class="link">WordPress.Access2online.com</a></figcaption>
+							<figcaption><a href="http://www.wordpress.access2online.com/" class="link" target="_blank">WordPress.Access2online.com</a></figcaption>
 						</div>
 						<div class="column">
 							<img src="images/SCNinc.png" class="images2" role="presentation" alt="">
-							<figcaption><a href="https://www.secondchancenet.org/" class="link">SecondChanceNet.org</a></figcaption>
+							<figcaption><a href="https://www.secondchancenet.org/" class="link" target="_blank">SecondChanceNet.org</a></figcaption>
 						</div>
 						<div class="column">
 							<img src="images/SCI.png" class="images2" id="sci" role="presentation" alt="">
-							<figcaption><a href="http://www.secondchanceincubator.org/" class="link">SecondChanceIncubator.org</a></figcaption>
+							<figcaption><a href="http://www.secondchanceincubator.org/" class="link" target="_blank">SecondChanceIncubator.org</a></figcaption>
 						</div>
 						<div class="column">
 							<img src="images/Mintrusts.png" class="images2" role="presentation" alt="">
-							<figcaption><a href="http://www.minitrusts.org/" class="link">Minitrusts.org</a></figcaption>
+							<figcaption><a href="http://www.minitrusts.org/" class="link" target="_blank">Minitrusts.org</a></figcaption>
 						</div>
 					
 				</div>
@@ -125,58 +140,65 @@
 			<h2>Education</h2>
 				<div class="row">
 					<div class="column">
-						<h3 class="h3margin">Code The Dream</h3>
+						<a href="https://codethedream.org/" target="_blank"><h3 class="h3margin">Code The Dream</h3></a>
 						<h4>Red Comet Cless</h4>
 						<p>Currently attending the Intro to Programming course enhancing techniques and knowledge of JavaScript, HTML and CSS. Eagerly planning to apply for their advanced React JS program this Fall.</p>
 					</div>
 					<div class="column">
-						<img class="images" src="images/CTD_Logo_Primary.png" alt="Code The Dream">
+						<a href="https://codethedream.org/" class="margAuto" target="_blank"><img class="images inline-photo show-on-scroll" src="images/CTD_Logo_Primary.png" alt="Code The Dream"></a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<h3 class="h3margin">Department of Homeland Security</h3>
+						<a href="https://www.dhs.gov/trusted-tester" target="_blank"><h3 class="h3margin">Department of Homeland Security</h3></a>
 						<h4>Certified Trusted Tester (#TT-2005-00903)</h4>
 						<p>The Office of Accessible Systems &amp; Technology Trusted Tester Training Program taught me about the Section 508 Standards applicable to the web, how to install and use web accessibility test tools, and how to apply the Trusted Tester process for testing web sites and web applications for conformance to Section 508 standards and WCAG 2.0 Level A and AA.</p>
 					</div>
 					<div class="column">
-						<img class="images" src="images/TT_Trademark.png" alt="Department of Homeland Security Trusted Tester Certified">
+						<a href="https://www.dhs.gov/trusted-tester" class="margAuto" target="_blank"><img class="images inline-photo show-on-scroll" src="images/TT_Trademark.png" alt="Department of Homeland Security Trusted Tester Certified"></a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<h3 class="h3margin">The Last Mile</h3>
+						<a href="https://thelastmile.org/" target="_blank"><h3 class="h3margin">The Last Mile</h3></a>
 						<h4>Phase One Graduate</h4>
 						<p>This amazing program helped me to develop highly marketable personal and professional skills that are relevant and competitive in today's business environment. The core curriculum included HTML, CSS, JavaScript, jQuery, and WordPress. At the top of my class, I also functioned as a tutor to my peers.</p>
 					</div>
 					<div class="column">
-						<img class="images" src="images/TML_logo.png" alt="The Last Mile paving the road to success">
+						<a href="https://thelastmile.org/" class="margAuto" target="_blank"><img class="images inline-photo show-on-scroll" src="images/TML_logo.png" alt="The Last Mile paving the road to success"></a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<h3 class="h3margin">Yakima Valley College</h3>
+						<a href="https://www.yvcc.edu/academics/information-tech/" target="_blank"><h3 class="h3margin">Yakima Valley College</h3></a>
 						<h4>10 credits away from an Associates of Applied Science- Information Technology</h4> 
 						<p>Courses included: Operating Systems, Networking, Adobe Photoshop and InDesign, Microsoft Word, PowerPoint, Advanced Microsoft Excel and Access, Visual Basic, Computer Hardware, Internet Essentials, Business Law, Marketing and Communications</p>
 					</div>
 					<div class="column">
-						<img class="images" src="images/yvc_logo.png" alt="Yakima Valley College">
+						<a href="https://www.yvcc.edu/academics/information-tech/" class="margAuto" target="_blank"><img class="images inline-photo show-on-scroll" src="images/yvc_logo.png" alt="Yakima Valley College"></a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="column">
-						<h3 class="h3margin">Harvest Bible University</h3>
+						<a href="https://harvest.edu/" target="_blank"><h3 class="h3margin">Harvest Bible University</h3></a>
 						<h4>Associates of Ministry</h4> 
 						<p>The Associate of Ministry degree is a two-year college degree that provides basic training in the Bible, theology, character, and ministry. It is designed to equip a Christian to walk with God and serve Him effectively in a local church.</p>
 					</div>
 					<div class="column">
-						<img id="hbu" class="images" src="images/hbu_logo.png" alt="Harvest Bible University">
+						<a href="https://harvest.edu/" class="margAuto" target="_blank"><img class="images inline-photo show-on-scroll" src="images/hbu_logo.png" alt="Harvest Bible University"></a>
 					</div>
 				</div>
 		</section>
 <!-- Connect Section -->
 		<section id="connect" class="border">
-			<h2>Connect with Me</h2>
+			<div class="row">
+				<div class="column">
+					<h2>Connect with Me</h2>
+				</div>
+				<div class="column flex-3">
+					<img src="https://toppng.com/uploads/preview/butterfly-11540994766j01qpxlcov.png" class="butterflies" role="presentation" alt="Download butterfly png images background@toppng.com">
+				</div>
+			</div>
 				<div class="row">
 					<div class="column">
 						<h3>Let's work together.</h3>
