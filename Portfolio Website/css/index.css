@@ -7,10 +7,12 @@
 * {
 	box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
 	background-color: whitesmoke;
 	color: #080707;
-/*	font-weight: bold;*/
 	display: flex;
 	flex-direction: column;
 	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
@@ -43,6 +45,10 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 1;
+}
+#hamnav label, #hamburger { 
+	display: none; 
 }
 .mainMenu {
 	display: flex;
@@ -63,12 +69,10 @@ nav ul li a:before {
 nav ul li a:hover {
   color: #8c55bf;
 }
-nav.stroke ul li a,
-.fill a {
+nav.stroke ul li a {
   position: relative;
 }
-nav.stroke ul li a:after,
-.fill a:after {
+nav.stroke ul li a:after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -83,29 +87,6 @@ nav.stroke ul li a:after,
 nav.stroke ul li a:hover:after {
   width: 100%;
 }
-
-.fill a {
-  transition: all 2s;
-}
-
-.fill a:after {
-  text-align: left;
-  content: '.';
-  margin: 0;
-  opacity: 0;
-}
-.fill a:hover {
-  color: #8c55bf;
-  z-index: 1;
-}
-.fill a:hover:after {
-  z-index: -10;
-  animation: fill 1s forwards;
-  -webkit-animation: fill 1s forwards;
-  -moz-animation: fill 1s forwards;
-  opacity: 1;
-}
-
 /*******Skip Link*********/
 .skipLink {
 	background: #7ac2e9;
@@ -120,7 +101,23 @@ nav.stroke ul li a:hover:after {
 }
 .skipLink:focus {
  	transform: translateY(0%);
-	z-index: 1;
+	z-index: 2;
+}
+/******Animations*******/
+.butterfly {
+	background: url("../images/butterfly_sprite2.png.png") 1000px 100px no-repeat;
+	width: 105px;
+	height: 90px;
+	display: inline-flex;
+	background-position: 0px 0px;
+	animation: butterfly-animation 1s steps(10) infinite;
+	position: relative;
+	left: -39px;
+	top: -40px;
+}
+@keyframes butterfly-animation {
+	0% { background-position: 0px 0px; }
+	100% { background-position: -1000px 0px;}
 }
 /*******Main Components*************/
 a {
@@ -161,6 +158,9 @@ h3 {
 	font-size: 1.5rem;
 	font-weight: bold;
 }
+a h3:hover {
+	color: #551a8b;
+}
 h4 {
 	color: black;
 	font-size: 1rem;
@@ -182,7 +182,10 @@ figcaption a {
 	padding: .5em;
 }
 .link:hover {
-	font-size: 1.1em;
+	color: #8c55bf;
+}
+.margAuto {
+	margin: auto;
 }
 .border {
 	border-bottom: 10px solid;
@@ -194,6 +197,7 @@ figcaption a {
 	font-size: 2rem;
 	font-family: cursive;
 	margin: auto;
+	text-align: center;
 }
 /*********Images**********/
 #banner {
@@ -208,6 +212,7 @@ figcaption a {
 .msgFlower {
 	height: auto;
 	width: 50%;
+	max-width: 300px;
 	margin: auto;
 }
 #headshot {
@@ -236,11 +241,31 @@ figcaption a {
 	margin: auto;
 	padding: 1em;
 }
-#hbu {
-	max-height: 185px;
-}
 #sci {
 	height: 215px;
+}
+.butterflies {
+	max-width: 300px;
+}
+.flex-3 {
+	flex-basis: 23%;
+}
+.inline-photo {
+  border: 1em solid #fff;
+  border-bottom: 4em solid #fff;
+  border-radius: .25em;
+  margin: 2em auto;
+  opacity: 0;
+  transform: translateY(4em) rotateZ(-5deg);
+  transition: transform 4s .25s cubic-bezier(0,1,.3,1),
+              opacity .3s .25s ease-out;
+  max-width: 600px;
+  width: 90%;
+  will-change: transform, opacity;
+}
+.inline-photo.is-visible {
+  opacity: 1;
+  transform: rotateZ(0deg);
 }
 /********Skills Section******/
 #skillsList {
@@ -283,16 +308,6 @@ input, textarea {
 	
 }
 /***********Messages Section*********/
-/*
-#messages {
-	padding-top: 0;
-	margin-top: 0;
-}
-#message {
-	padding-bottom: 0;
-	margin-bottom: 0;
-}
-*/
 #messages_list {
 	display: flex;
 	flex-wrap: wrap;
@@ -346,23 +361,26 @@ footer {
 		margin: 0em;
 	}
 }
+@media only screen and (max-width: 1350px) {
+	.flex-3 {
+	flex-basis: 0;
+		margin: auto;
+	}
+}
 @media only screen and (min-width: 1028px) {
 	h1 {
-	font-size: 9rem;
+	font-size: 8rem;
 }
 	h2 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		margin-top: 1em;
 	}
 	h3 {
-		font-size: 2.5rem;
+		font-size: 2.25rem;
 	}
 	h4 {
-		font-size: 2rem;
-		}
-	Body {
 		font-size: 1.5rem;
-	}
+		}
 	.images{
 		max-width: 400px;
 	}
@@ -371,6 +389,17 @@ footer {
 	section {
 		padding: 1em;
 		margin: 1em;
+	}
+	#messages_list li {
+    	flex-basis: 50%;
+	}
+}
+@media only screen and (max-width: 700px) {
+	.butterfly {
+		display: none;
+	}
+	.butterflies {
+		max-width: 150px;
 	}
 }
 @media only screen and (max-width: 600px) {
@@ -402,9 +431,56 @@ footer {
 	footer {
 		margin-top: 2em;
 	}
-}
-@media only screen and (max-width: 400px) {
-	.menuItem {
-		font-size: 1em;
+	.butterflies {
+		margin: auto;
 	}
+	#messages_list li {
+    	flex-basis: 60%;
+    	margin: auto;
+	}
+	/* MOBILE NAVIGATION */
+	.nav {
+		display: none;
+	}
+	/* BREAK INTO VERTICAL MENU */
+	#hamnav {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+  		width: 25%;
+  		background: #fff;
+		position: fixed;
+		right: 0;
+    	padding: 15px;
+	}
+	#hamitems a {
+		box-sizing: border-box;
+		display: inline-flex;
+		width: 100%;
+		color: #551a8b;
+		text-align: center;
+		padding: 5px;
+	}
+	  /* SHOW HAMBURGER ICON */
+	#hamnav label { 
+		display: inline-block; 
+		color: white;
+		background: #0292e0;
+		font-style: normal;
+		font-size: 1.2em;
+		font-weight: bold;
+		padding: 10px;
+		right: 0;
+		width: 44%;
+		align-self: flex-end;
+	}
+
+	  /* TOGGLE SHOW/HIDE MENU */
+	  #hamitems { 
+		  display: none;
+	}
+	  #hamnav input:checked ~ #hamitems { 
+		  display: block; 
+	}
+	
 }
