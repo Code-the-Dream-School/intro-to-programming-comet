@@ -447,11 +447,10 @@ footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-  		width: 25%;
-  		background: #fff;
+  		width: 30%;
 		position: fixed;
 		right: 0;
-    	padding: 15px;
+    		padding: 5px;
 	}
 	#hamitems a {
 		box-sizing: border-box;
@@ -471,7 +470,6 @@ footer {
 		font-weight: bold;
 		padding: 10px;
 		right: 0;
-		width: 44%;
 		align-self: flex-end;
 	}
 
