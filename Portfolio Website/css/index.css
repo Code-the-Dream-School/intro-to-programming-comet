@@ -251,9 +251,6 @@ figcaption a {
 	flex-basis: 23%;
 }
 .inline-photo {
-  border: 1em solid #fff;
-  border-bottom: 4em solid #fff;
-  border-radius: .25em;
   margin: 2em auto;
   opacity: 0;
   transform: translateY(4em) rotateZ(-5deg);
