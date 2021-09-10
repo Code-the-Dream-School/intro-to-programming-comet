@@ -244,16 +244,7 @@ figcaption a {
 #sci {
 	height: 215px;
 }
-.butterflies {
-	max-width: 300px;
-}
-.flex-3 {
-	flex-basis: 23%;
-}
 .inline-photo {
-  border: 1em solid #fff;
-  border-bottom: 4em solid #fff;
-  border-radius: .25em;
   margin: 2em auto;
   opacity: 0;
   transform: translateY(4em) rotateZ(-5deg);
@@ -447,11 +438,10 @@ footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-  		width: 25%;
-  		background: #fff;
+  		width: 30%;
 		position: fixed;
 		right: 0;
-    	padding: 15px;
+    	padding: 5px;
 	}
 	#hamitems a {
 		box-sizing: border-box;
@@ -469,10 +459,9 @@ footer {
 		font-style: normal;
 		font-size: 1.2em;
 		font-weight: bold;
-		padding: 10px;
-		right: 0;
-		width: 44%;
+		padding: 10px;		
 		align-self: flex-end;
+		text-align: center;
 	}
 
 	  /* TOGGLE SHOW/HIDE MENU */
