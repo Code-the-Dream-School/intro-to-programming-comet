@@ -98,12 +98,10 @@ function gitHubRequest(data){
 	}
 }
 
-
 //Footer Section- Copyright Current Year
 copyright.innerHTML = `&copy; ${thisYear} Crystal Scott`;
 footer.appendChild(copyright);
 
-//Skills Section- Add list items of skills
 for(let i = 0; i < skillsArray.length; i += 1){
 	let skill = document.createElement('li');
 	skill.textContent = skillsArray[i];
@@ -178,9 +176,3 @@ messagesList.addEventListener('click', (e) => {
 		}
 	}
 });
-
-
-
-
-
-

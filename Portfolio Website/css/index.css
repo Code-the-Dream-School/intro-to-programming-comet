@@ -438,10 +438,11 @@ footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-  		width: 30%;
+
+  	width: 30%;
 		position: fixed;
 		right: 0;
-    	padding: 5px;
+    padding: 5px;
 	}
 	#hamitems a {
 		box-sizing: border-box;
