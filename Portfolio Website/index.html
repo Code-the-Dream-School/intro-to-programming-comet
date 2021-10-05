@@ -34,7 +34,7 @@
 				<li class="menuItem"><a href="#projects">Projects</a></li>
 				<li class="menuItem"><a href="#experience">Experience</a></li>
 				<li class="menuItem"><a href="#education">Education</a></li>
-				<li class="menuItem"><a href="#connect">Connect</a></li>
+				<li class="menuItem"><a href="#connect">Contact</a></li>
 			</ul>
 		</nav>
 	<!-- Mobile Navigation --> 
@@ -47,7 +47,7 @@
 					<a href="#projects" tabindex="-1">Projects</a>
 					<a href="#experience" tabindex="-1">Experience</a>
 					<a href="#education" tabindex="-1">Education</a>
-					<a href="#connect" tabindex="-1">Connect</a>
+					<a href="#connect" tabindex="-1">Contact</a>
 				  </div>
 			 </nav>
 	</header>
@@ -192,11 +192,11 @@
 <!-- Connect Section -->
 		<section id="connect" class="border">
 			<div class="row">
-					<h2>Connect with Me</h2>
+					<h2>Contact</h2>
 			</div>
 				<div class="row">
 					<div class="column">
-						<h3>Let's work together.</h3>
+						<h3>Let's work together</h3>
 					</div>
 					<div class="column">
 						<div class="row">
@@ -215,36 +215,32 @@
 		</section>
 <!-- Message Section -->
 		<section>
-			<h2>Leave a Message</h2>
+			<h2>Send me a message</h2>
 			<div class="row">
 				<div class="column">
-					<form name="leave_message" action="mailto:clcarson84@gmail.com"  method="POST" enctype="multipart/form-data">
+					<form id="my-form" action="https://formspree.io/f/xjvjzeeb"  method="POST" enctype="multipart/form-data">
 						<label for="name">Name</label>
 						<br>
-						<input type="text" id="name" name="name" required="true">
+						<input type="text" id="name" name="name" required>
 						<br>
 						<label for="email">Email</label>
 						<br>
-						<input type="email" id="email" name="email" required="true">
+						<input type="email" id="email" name="email" required>
 						<br>
 						<label for="message">Message</label>
 						<br>
-						<textarea id="message" name="message" required="true"></textarea>
+						<textarea id="message" name="message" required></textarea>
 						<br>
 						<button id="submit_button" type="submit">Submit</button>
 					</form>
+					<div id="status"></div>
 				</div>
+				
 				<div class="column">
 					<img src="images/PinkDaisy_op.png" class="msgFlower" role="presentation" alt="">
 					<p id="thanks">Thanks for visiting!</p>
 				</div>
 			</div>
-		</section>
-		<section id="messages">
-			<h2>Messages</h2>
-			<ul id="messages_list">
-			<!--Message LIs inserted with JS-->
-			</ul>
 		</section>
 	</main>
 <!-- Footer -->

@@ -294,9 +294,41 @@ input, textarea {
 	border-radius: 8px;
 	font-size: 1.25rem;
 	font-weight: bold;
-	padding: 5px 20px 5px 20px;
+	padding: 11px 20px 11px 20px;
 	margin-top: 10px;
 	
+}
+#status {
+	width: 90%;
+	max-width: 500px;
+	text-align: center;
+	padding: 10px;
+	margin: 20px auto;
+	border-radius: 8px;
+	font-weight: bold;
+}
+#status.success {
+	background-color: limegreen;
+	animation: status 4s ease forwards;
+}
+#status.error {
+	background-color: #de3327;
+	color: white;
+	animation: status 4s ease forwards;
+}
+@keyframes status {
+	0%{
+		opacity: 1;
+		pointer-events: all;
+	}
+	90%{
+		opacity: 1;
+		pointer-events: all; 
+	}
+	100%{
+		opacity: 0;
+		pointer-events: none;
+	}
 }
 /***********Messages Section*********/
 #messages_list {
