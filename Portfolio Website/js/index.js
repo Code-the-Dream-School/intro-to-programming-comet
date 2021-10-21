@@ -24,7 +24,7 @@ function loop() {
 }
 loop();
 
-function isElementInViewport(el) { 
+function isElementInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
     (rect.top <= 0
