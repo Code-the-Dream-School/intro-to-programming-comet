@@ -6,18 +6,12 @@ const copyright = document.createElement('p');
 copyright.innerHTML = `&copy; ${thisYear} Crystal Scott`;
 footer.appendChild(copyright);
 
-//Skills Section
-const skillsArray = ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop', 'Accessibility'];
-const skillsSection = document.getElementById('skills');
-const skillsList = skillsSection.getElementsByTagName('ul')[0];
-
 //Scroll Animation
 const scroll = window.requestAnimationFrame ||
             function(callback){ window.setTimeout(callback, 1000/60)};
 const elementsToShow = document.querySelectorAll('.show-on-scroll');
 
 function loop() {
-
   elementsToShow.forEach(function (element) {
     if (isElementInViewport(element)) {
       element.classList.add('is-visible');
@@ -30,8 +24,7 @@ function loop() {
 }
 loop();
 
-function isElementInViewport(el) {
-  
+function isElementInViewport(el) { 
   const rect = el.getBoundingClientRect();
   return (
     (rect.top <= 0
@@ -52,8 +45,10 @@ document.getElementById('hamnav').addEventListener("click", function() {
 	const hamnav = document.getElementById('hamnav');
 	if(!input.checked){
 		hamnav.style.background = 'none';
+		input.setAttribute('aria-expanded', 'false');
 	}else{
 		hamnav.style.background = '#fff';
+		input.setAttribute('aria-expanded', 'true');
 	}
 });
 
@@ -93,7 +88,10 @@ function gitHubRequest(data){
 	}
 }
 
-//Skills Section- Add list items of skills
+//Skills Section
+const skillsArray = ['HTML', 'CSS', 'JavaScript', 'jQuery', 'WordPress', 'ekklesia360', 'GitHub', 'Adobe Photoshop', 'Accessibility'];
+const skillsSection = document.getElementById('skills');
+const skillsList = skillsSection.getElementsByTagName('ul')[0];
 for(let i = 0; i < skillsArray.length; i += 1){
 	let skill = document.createElement('li');
 	skill.textContent = skillsArray[i];
@@ -124,3 +122,17 @@ const form = document.getElementById("my-form");
 	}
 	form.addEventListener("submit", handleSubmit);
 
+//Add focus to headings when nav buttons clicked
+
+document.getElementById('myLinks').addEventListener("click", function() {
+	const about = document.getElementById('about-heading');
+	
+	const hamnav = document.getElementById('hamnav');
+	if(!input.checked){
+		hamnav.style.background = 'none';
+		input.setAttribute('aria-expanded', 'false');
+	}else{
+		hamnav.style.background = '#fff';
+		input.setAttribute('aria-expanded', 'true');
+	}
+});
